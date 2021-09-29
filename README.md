@@ -1,9 +1,10 @@
 # wechat-mini-steps
 小程序自定义步骤条组件（根据LinUI改写 https://doc.mini.talelin.com/component/view/steps.html ）
 
-![demo](https://github.com/Jidahan/wechat-mini-steps/raw/main/image/demo.gif)
+![demoGif](https://github.com/Jidahan/wechat-mini-steps/raw/main/image/demo.gif)
 
 
+示例代码： [示例代码](https://github.com/Jidahan/wechat-mini-steps/blob/main/pages/buyHouseSteps/buyHouseSteps.wxml)
 # l-steps 参数
 key | type[value] | 描述
 ------- | -------
