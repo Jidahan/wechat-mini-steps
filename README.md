@@ -5,6 +5,8 @@
 
 
 示例代码： [示例代码](https://github.com/Jidahan/wechat-mini-steps/blob/main/pages/buyHouseSteps/buyHouseSteps.wxml)
+
+![demopng](https://github.com/Jidahan/wechat-mini-steps/raw/main/image/demoimg.png)
 ## l-steps 参数
 |key|type[value]|description|
 |:----|:---|:----------|
