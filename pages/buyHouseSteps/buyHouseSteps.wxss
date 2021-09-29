@@ -1,0 +1,38 @@
+/* pages/buyHouseSteps/buyHouseSteps.wxss */
+page {
+  height: auto;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bg {
+  height: 100%;
+  background-color: #F5F5F5;
+  padding: 40rpx;
+}
+.gzImg {
+  width: 140rpx;
+  height: 140rpx;
+}
+.cardStyle {
+  background-color: white;
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+  margin-top: -60rpx;
+  margin-left: 10rpx;
+  margin-bottom: 120rpx;
+  width: 500rpx;
+  justify-content: space-between;
+}
+.rgHouse {
+  color: black;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+.disText {
+  font-size: 1.2em;
+  margin-top: 10rpx;
+}
+

@@ -1,0 +1,81 @@
+<view class="step {{'step-'+direction}} l-class" style="{{direction==='row'?'width:'+(1/length)*stepsWidth+'px':'min-height:'+stepMinHeight+'rpx'}}">
+
+<!-- 进度点 -->
+  <view class="step-container l-step-class {{'step-container-'+direction}}" style="margin-left: 10%;position: relative;">
+    <!-- 如果自定义 -->
+    <view wx:if="{{custom}}" class="step-custom" style="width: 1000%;position: absolute;display: flex;flex-direction: row;">
+      <!-- <slot name="dot"/> -->
+      <view style="color: #868686;font-size: 1.2em;margin-left: 15%;margin-bottom: 10%;">{{leftText}}</view>
+      <view style="margin-left: 20%;color: #868686;font-size: 1.2em;margin-bottom: 10%;">{{rightText}}</view>
+    </view>
+    <!-- else -->
+    <view wx:else class="l-step-class {{dot && !icon?'step-dot-'+currentStatus.setStatus(activeIndex,index,status)+' step-dot':'step-'+currentStatus.setStatus(activeIndex,index,status)+' step-icon'}}" 
+    style="{{dot?currentStatus.dotStyle(activeIndex,index,color):currentStatus.statusStyle(activeIndex,index,color,status)}}">
+    </view>
+  </view>
+
+  <!-- 进度内容 title、describe -->
+  <view class="step-content {{'step-content-'+direction}}" style="width: 100%;">
+    <view class="l-title-class {{activeIndex===index?'step-title-process':'step-title'}}" style="width: 20%;{{title || !year?'':'margin-top: -2%;'}}{{title ? 'margin-left: -25%;':'margin-left: -23%;' }}">
+      <block wx:if="{{title}}">
+        <view style="color: #CCCCCC;font-size:1.3em">{{title}}</view>
+      </block>
+      <block wx:else>
+        <view style="font-family: SSZHJT;font-weight: 400;color: #101010;font-size: 1.8em;">{{year}}</view>
+        <view style="font-family: SSZHJT;font-weight: 400;color: #858585;font-size: 1.2em;margin-top: 10rpx;">{{month}}</view>
+      </block>
+    </view>
+    <view class="l-describe-class step-describe" style="margin-left: 3%;">
+      {{describe}}
+      <slot name="describe"/>
+    </view>
+  </view>
+
+  <!-- 进度线 -->
+  <view class="step-line l-line-class {{'step-line-'+ direction}} {{currentStatus.isReverse(reverse,activeIndex,index)?'step-line-finish':'step-line-wait'}}" style="{{activeIndex>index?('background-color:'+color+';'+'margin-left: 8.5%;border-right: 1rpx solid '+color):'margin-left: 8.5%;border-right: 1rpx dashed #AAAAAA'}}" wx:if="{{reverse?(index!==0):(length!==index+1)}}">
+  </view>
+</view>
+
+<wxs module="currentStatus">
+var setStatus = function(activeIndex,index,status){
+  if(activeIndex===index){
+    return status || 'process'
+  } else if(activeIndex>index){
+    return 'finish'
+  }else{
+    return 'wait'
+  }
+}
+
+var statusStyle = function(activeIndex,index,color,status){
+  if(activeIndex===index){
+    return status==='error'?'':('background-color:' + color)
+  } else if(activeIndex>index){
+    return ('border-color:' + color + ';color:' + color)
+  }else{
+    return ''
+  }
+}
+
+var dotStyle = function(activeIndex,index,color){
+  if(activeIndex>=index){
+    return ('background-color:' + color + ';' + 'box-shadow: 0px 1px 13px 0px ' + color)
+  } else{
+    return ''
+  }
+}
+
+var isReverse = function(reverse,activeIndex,index) {
+  if(reverse){
+    return (activeIndex>=index)
+  }
+  return (activeIndex>index)
+}
+
+module.exports = {
+  setStatus:setStatus,
+  statusStyle:statusStyle,
+  dotStyle:dotStyle,
+  isReverse:isReverse
+}
+</wxs>

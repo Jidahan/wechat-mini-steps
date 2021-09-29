@@ -1,0 +1,96 @@
+<!--pages/buyHouseSteps/buyHouseSteps.wxml-->
+<view class="bg">
+  <l-steps direction="column" active-index="5" dot color='green'>
+    <l-step year='' month='' title='' leftText='日期' rightText='事件' custom>
+    </l-step>
+
+    <l-step year='2019' month='06.08' title=''>
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">棒球</view>
+          <view class="disText">您已安排棒球</view>
+        </view>
+        <view>
+          <image src='../../image/棒球.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='' month='08.23' title=''>
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">骑行</view>
+          <view class="disText">您已骑行</view>
+        </view>
+        <view>
+          <image src='../../image/骑行.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='' month='10.05' title=''>
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">跑步</view>
+          <view class="disText">您已跑步</view>
+        </view>
+        <view>
+          <image src='../../image/跑步.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='2020' month='01.01' title=''>
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">击剑</view>
+          <view class="disText">您已击剑</view>
+        </view>
+        <view>
+          <image src='../../image/击剑.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='2021' month='02.09' title="">
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">艺术体操</view>
+          <view class="disText">您已安排艺术体操</view>
+        </view>
+        <view>
+          <image src='../../image/艺术体操.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='' month='' title="未执行">
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">曲棍球</view>
+          <view class="disText">您已曲棍球</view>
+        </view>
+        <view>
+          <image src='../../image/曲棍球.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='' month='' title="未执行">
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">体操</view>
+          <view class="disText">您已体操</view>
+        </view>
+        <view>
+          <image src='../../image/体操.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+    <l-step year='' month='' title="未执行">
+      <view class="describe-container flexRow cardStyle" slot="describe">
+        <view>
+          <view class="rgHouse">排球</view>
+          <view class="disText">您已排球</view>
+        </view>
+        <view>
+          <image src='../../image/排球.png' class="gzImg"/>
+        </view>
+      </view>
+    </l-step>
+  </l-steps>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人进度",
+  "usingComponents": {
+    "l-steps": "../components/steps/index",
+    "l-step": "../components/step/index"
+  }
+}

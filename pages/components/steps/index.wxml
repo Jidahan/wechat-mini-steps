@@ -1,0 +1,7 @@
+<view class="l-class steps-container {{reverse?'steps-container-'+direction+'-reverse':'steps-container-'+direction}}" style="margin-top: 2%;">
+    <!-- <view style="display: flex;flex-direction: row;justify-content:space-around;z-index: 1;margin-left: -28%">
+        <view style="color: #868686;margin-top: -10%;margin-bottom: 2%;">日期</view>
+        <view style="color: #868686;margin-top: -10%;margin-bottom: 2%;">事件</view>
+    </view> -->
+    <slot/>
+</view>
