@@ -20,8 +20,9 @@ year | String | '进度条左侧关于 年 的字段'
 month | String | '进度条左侧关于 月份 的字段'
 title | String | '进度条左侧未执行的文字描述'
 
-第一列 | 第二列
+key | 'type[value]' | 描述
 ------- | -------
-第一行第一列 | 第一行第二列
-第二行第一列 | 第二行第二列
-第三行第一列 | 第三行第二列
+direction | 'String 'column'/'row' | '步骤条排列方向'（由于项目进度原因，本项目只做了column的适配）
+active-index | 'String[number]' | '当前进度所在锚点'
+dot | Boolean | '设置步骤条为点状步骤条'
+color | String | '点状态下的颜色以及选中的阴影颜色'
