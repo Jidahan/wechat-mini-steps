@@ -14,19 +14,11 @@
 |`color`|String|点状态下的颜色以及选中的阴影颜色|
 
 ## l-step 参数
-key | value | 描述
-------- | -------
-year | String | '进度条左侧关于 年 的字段'
-month | String | '进度条左侧关于 月份 的字段'
-title | String | '进度条左侧未执行的文字描述'
-leftText | String | '步骤条上面左侧文字，例：日期。需开启custom'
-rightText | String | '步骤条上面左侧文字，例：事件。需开启custom'
-custom | Boolean | 是否开启自定义
-
-key | 'type[value]' | 描述
-------- | -------
-1|2|3
-<!-- direction | 'String 'column'/'row' | '步骤条排列方向'（由于项目进度原因，本项目只做了column的适配）
-active-index | 'String[number]' | '当前进度所在锚点'
-dot | Boolean | '设置步骤条为点状步骤条'
-color | String | '点状态下的颜色以及选中的阴影颜色' -->
+|key|type[value]|description|
+|:----|:---|:----------|
+|`year`|String|进度条左侧关于 年 的字段|
+|`month`|String|进度条左侧关于 月份 的字段|
+|`title`|String|进度条左侧未执行的文字描述|
+|`leftText`|String|步骤条上面左侧文字，例：日期。需开启custom|
+|`rightText`|String|步骤条上面左侧文字，例：事件。需开启custom|
+|`custom`|Boolean|是否开启自定义|
