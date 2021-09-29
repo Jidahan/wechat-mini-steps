@@ -1,8 +1,6 @@
 {
   "pages":[
-    "pages/buyHouseSteps/buyHouseSteps",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/buyHouseSteps/buyHouseSteps"
   ],
   "window":{
     "backgroundTextStyle":"light",
